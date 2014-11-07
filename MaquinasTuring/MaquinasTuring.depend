@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1415334538 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<string.h>
+	<strings.h>
+	<winbgim.h>
+	<GraficadorTuring.h>
+	<lectorArchivoTxt.h>
+
+1415290570 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\graficadorturing.h
+	<winbgim.h>
+	<string>
+	<math.h>
+	<stdexcept>
+
+1415315932 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\lectorarchivotxt.h
+	<iostream>
+
