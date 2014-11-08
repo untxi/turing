@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1415393875 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
+1415472817 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
 	<iostream>
 	<cstdlib>
 	<string>
@@ -15,6 +15,9 @@
 	<math.h>
 	<stdexcept>
 
-1415315932 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\lectorarchivotxt.h
+1415473425 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\lectorarchivotxt.h
 	<iostream>
+	<fstream>
+	<string>
+	<sstream>
 

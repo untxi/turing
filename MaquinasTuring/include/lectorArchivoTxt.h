@@ -1,35 +1,21 @@
-#ifndef LECTORARCHIVOTXT_H
-#define LECTORARCHIVOTXT_H
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 using namespace std;
+//http://www.cplusplus.com/doc/tutorial/files/
+//http://www.programacionenc.net/index.php?option=com_content&view=article&id=69:manejo-de-archivos-en-c&catid=37:programacion-cc&Itemid=55
+int lectorArchivoTxt(){
+    string lineaEnArchivo;
+    ifstream archivoPorAbrir ("C:\\Users\\Samantha\\Desktop\\TuringEj1.txt");
+    if (archivoPorAbrir.is_open()){
+        while ( getline (archivoPorAbrir,lineaEnArchivo) ){
+            cout << lineaEnArchivo << '\n';
+         }
+        archivoPorAbrir.close();
+      }
+      else cout << "Unable to open file";
 
-class lectorArchivoTxt
-{
-    // Atributos de la clase
-    /*
-    ifstream::pos_type size;
-    string nombreArchivo;
-    char * memoriaArchivo;
+    return 0;
 
-    public:
-        lectorArchivoTxt(string archivo){
-            nombreArchivo = archivo + ".txt";
-
-            ifstream file (archivo, ios::in|ios::binary|ios::ate);
-            if (file.is_open())
-            {
-                size = file.tellg(); 		// Obtener el tamaño del archivo
-                memoriaArchivo = new char [size];// Solicita memoria para datos
-                file.seekg (0, ios::beg); // Puntero al inicio, lee y cierra
-                file.read (memoriaArchivo, size);
-                file.close();
-                cout << "the complete file content is in memory";
-                delete[] memoriaArchivo;
-            }
-            else cout << "Unable to open file";
-        }
-        virtual ~lectorArchivoTxt();
-        */
-};
-
-#endif // LECTORARCHIVOTXT_H
+}
