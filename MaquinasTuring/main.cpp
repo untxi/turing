@@ -9,13 +9,37 @@ using namespace std;
 // Estructuras
 #include <GraficadorTuring.h>
 #include <lectorArchivoTxt.h>
-
+// Menu
+char miMenu(){
+    char opcion;
+    cout <<"\n        ______  ______  ______  ______  ______  ______  ______  ______ " << endl;
+    cout <<"       ||M   ||||A   ||||Q   ||||U   ||||I   ||||N   ||||A   ||||S   ||" << endl;
+    cout <<"       ||____||||____||||____||||____||||____||||____||||____||||____||" << endl;
+    cout <<"       |/____\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\|" << endl;
+	cout <<"  ______  ______  ___________  ______  ______  ______  ______  ______  ______ " << endl;
+    cout <<" ||D   ||||E   ||||         ||||T   ||||U   ||||R   ||||I   ||||N   ||||G   ||" << endl;
+    cout <<" ||____||||____||||_________||||____||||____||||____||||____||||____||||____||" << endl;
+    cout <<" |/____\\||/____\\||/_________\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\|" << endl;
+    cout << endl;
+    cout << "Menu:" << endl;
+    cout << "   a. Ingresar nombre del archivo de texto\n";
+    cout << "   b. ¿Que es una Maquina de Turing?\n";
+    cout << "   c. ¿Quien es Turing?\n";
+    cout << "   d. Salir del programa\n\n";
+    cout << "Seleccione una opcion:  ";
+    cin  >> opcion;
+    return opcion;
+}
 //Pausa para el menu
 void pausa()
 {
-    cout << "P\ERROR\nPresione una tecla para volver al menu.";
+    cout << "\n\nPresione enter para volver al menu.";
     getwchar();
     getwchar();
+}
+
+void hagaTuring(){
+    cout << "Hace Turing\n";
 }
 
 int main()
@@ -23,17 +47,17 @@ int main()
     //Atributos
     bool bandera = false;
     char tecla;
-    const char*queEsTuring = "Una Máquina de Turing es un dispositivo que manipula símbolos escritos"\
+    const char*queEsTuring = "Una Maquina de Turing es un dispositivo que manipula simbolos escritos"\
                               "sobre una tira de cinta de acuerdo a una tabla de reglas.\n"\
                               "A pesar de su simplicidad, puede ser adaptada para simular la lógica\n"\
                               "de cualquier algoritmo de computador.\n";
 
     const char*quienEsTuring =  "Alan Mathison Turing\n\  *  23 de junio de 1912\n\  †   7 de junio de 1954\n"\
-                            "Fue un matemático, lógico, científico de la computación, criptógrafo y \n"\
-                            "filósofo británico.\n"\
-                            "Es considerado uno de los padres de la ciencia de la computación siendo\n"\
-                            "el  precursor  de  la  informática moderna.  Proporcionó una influyente\n"\
-                            "formalización de los conceptos de algoritmo y computación.\n";
+                            "Fue un matematico, logico, cientifico de la computacion, criptografo y \n"\
+                            "filosofo britanico.\n"\
+                            "Es considerado uno de los padres de la ciencia de la computacion siendo\n"\
+                            "el  precursor  de  la  informatica moderna.  Proporciono una influyente\n"\
+                            "formalizacion de los conceptos de algoritmo y computacion.\n";
 
     const char*imagenTuring =   "                                .->?33(32$2B$223$="\
                                 "                            .'!'>!)B02$2$32$B$BB2$2)-"\
@@ -89,15 +113,37 @@ int main()
                                 "$3)2B2B66BS3$*$B2)$)?$(3)66660060063(33+S*?2B3*2S$3!?*SS3$S$2$$+!*S!"\
                                 "$B$3BB2062$($3B$)22$2($)B666600666**S)23())0$!!$$$2$)(222$2$3B)*32*!";
 
-    cout <<"\n        ______  ______  ______  ______  ______  ______  ______  ______ " << endl;
-    cout <<"       ||M   ||||A   ||||Q   ||||U   ||||I   ||||N   ||||A   ||||S   ||" << endl;
-    cout <<"       ||____||||____||||____||||____||||____||||____||||____||||____||" << endl;
-    cout <<"       |/____\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\|" << endl;
-	cout <<"  ______  ______  ___________  ______  ______  ______  ______  ______  ______ " << endl;
-    cout <<" ||D   ||||E   ||||         ||||T   ||||U   ||||R   ||||I   ||||N   ||||G   ||" << endl;
-    cout <<" ||____||||____||||_________||||____||||____||||____||||____||||____||||____||" << endl;
-    cout <<" |/____\\||/____\\||/_________\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\|" << endl;
-    cout << endl;
-    cout << imagenTuring;
+    do{
+        char miOpcion = miMenu();
+
+        switch(miOpcion){
+            case 'a':
+                system("cls");
+                hagaTuring();
+                pausa();
+                system("cls");
+                miMenu();
+            case 'b':
+                system("cls");
+                cout << queEsTuring;
+                pausa();
+                system("cls");
+                miMenu();
+            case 'c':
+                system("cls");
+                cout << quienEsTuring;
+                pausa();
+                system("cls");
+                miMenu();
+            case 'd':
+                bandera = true;
+                break;
+            default:
+                system("cls");
+                pausa();
+                system("cls");
+                miMenu();
+        }
+    } while (bandera != true);
     return 0;
 }
