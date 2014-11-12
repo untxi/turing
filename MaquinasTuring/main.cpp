@@ -5,6 +5,8 @@
 #include <string.h>
 #include <strings.h>
 #include <winbgim.h>
+#include <LinkedList.h>
+#include <Node.h>
 using namespace std;
 // Estructuras
 #include <GraficadorTuring.h>
@@ -37,27 +39,29 @@ void pausa()
 
 void hagaTuring(){
     //string miArchivo;
-    cout << "Imprime archivo\n";
-    lectorArchivoTxt();
+    cout << "El archivo debe estar ubicado en el escritorio.\n";
+    //cout << "Digite el nombre del Archivo :";
+    //cin  >> miArchivo;
+    LinkedList<string> miMaquina;
+    miMaquina = lectorArchivoTxt();//miArchivo);
+    cout << "DONE Successful miMaquina assigment :D\n";
+    cout << "\nRevision contenido MiMaquina\n" << miMaquina.getSize() << endl;
 }
 
 int main()
 {
-    //Atributos
-    bool bandera = false;
-    char tecla;
     const char*queEsTuring = "Una Maquina de Turing es un dispositivo que manipula simbolos escritos"\
                               "sobre una tira de cinta de acuerdo a una tabla de reglas.\n"\
                               "A pesar de su simplicidad, puede ser adaptada para simular la lógica\n"\
                               "de cualquier algoritmo de computador.\n";
 
-    const char*quienEsTuring =  "Alan Mathison Turing\n\  *  23 de junio de 1912\n\  †   7 de junio de 1954\n"\
+    const char*quienEsTuring =  "Alan Mathison Turing\n\  *  23 de junio de 1912\n\  t   7 de junio de 1954\n"\
                             "Fue un matematico, logico, cientifico de la computacion, criptografo y \n"\
                             "filosofo britanico.\n"\
                             "Es considerado uno de los padres de la ciencia de la computacion siendo\n"\
                             "el  precursor  de  la  informatica moderna.  Proporciono una influyente\n"\
                             "formalizacion de los conceptos de algoritmo y computacion.\n";
-
+    /*
     const char*imagenTuring =   "                                    - .'+SS*?+''-"\
                                 "                              -''-'!!2BB00$6662BB2)'"\
                                 "                         '-*?=*B00232060000660#6#06B#*"\
@@ -115,9 +119,9 @@ int main()
                                 "33()32*SB0(S2*2S(0?!B20Q%$666##QQ##%'+=3?B$63B)2(0())?*S*(Q6*3)S(2B($66"\
                                 "23(3)SB*)$()?>SS(S>220Q%Q02@#QQ#QQ#%'BQ)2$0>2*2?**$2332$$#3$+==(20$S2Q6"\
                                 "*?2B$2S*2#(=*!6)*(!)$00%Q####Q##QQQ%#Q0$00#)S('S$)*3*?3#6#S*)B)63(3$B66";
-
+    */
+    bool bandera = false;
     do{
-        bool bandera = false;
         char miOpcion;
         system("cls");
         misOpciones();

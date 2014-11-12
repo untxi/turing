@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1415472817 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
+1415819969 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
 	<iostream>
 	<cstdlib>
 	<string>
 	<string.h>
 	<strings.h>
 	<winbgim.h>
+	<LinkedList.h>
+	<Node.h>
 	<GraficadorTuring.h>
 	<lectorArchivoTxt.h>
 
@@ -15,11 +17,13 @@
 	<math.h>
 	<stdexcept>
 
-1415756574 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\lectorarchivotxt.h
+1415819548 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\lectorarchivotxt.h
 	<iostream>
 	<fstream>
 	<string>
 	<sstream>
+	<LinkedList.h>
+	<Node.h>
 
 1415769808 source:c:\users\marco\documents\turing\maquinasturing\main.cpp
 	<iostream>
@@ -42,4 +46,14 @@
 	<fstream>
 	<string>
 	<sstream>
+
+1415820043 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\linkedlist.h
+	<Node.h>
+	<iostream>
+	<stdexcept>
+	<cstdlib>
+	<sstream>
+	<iostream>
+
+1415767682 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\node.h
 

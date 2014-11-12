@@ -20,50 +20,79 @@ using namespace std;
  R para estados de rechazo
 */
 
-LinkedList<string> split(string miLinea, char putAway){
-    LinkedList<string> contenido;// = new contenido;
-    string s(miLinea);
-    string::size_type prev_pos = 0, pos = 0;
-    while( (pos = s.find(putAway, pos)) != string::npos ){
-        string substring( s.substr(prev_pos, pos-prev_pos) );
-        //cout << substring << '\n';
-        contenido.append(substring);
-        prev_pos = ++pos;
-    }
-    string substring( s.substr(prev_pos, pos-prev_pos) ); // Last word
-    //cout << substring << '\n';
-    contenido.append(substring);
+/*
+Recibe una lista de string con la definicion de la Máquina de Turing
+(Recorre todas las líneas provenientes del archivo)
+Seleciona las partes y extrae los componente de cada uno
+*/
+class maquinaTuring{
+    private:
+        LinkedList<string> split(string miLinea, char putAway){
+            LinkedList<string> contenido;// = new contenido;
+            string s(miLinea);
+            string::size_type prev_pos = 0, pos = 0;
+            while( (pos = s.find(putAway, pos)) != string::npos ){
+                string substring( s.substr(prev_pos, pos-prev_pos) );
+                //cout << substring << '\n';
+                contenido.append(substring);
+                prev_pos = ++pos;
+            }
+            string substring( s.substr(prev_pos, pos-prev_pos) ); // Last word
+            //cout << substring << '\n';
+            contenido.append(substring);
 
-    return contenido;
-}
+            return contenido;
+        }
+    public:
 
-string setEstadoInicial(string miLinea){return miLinea.substr(2);}
-string setSimboloBlanco(string miLinea){return miLinea.substr(2);}
-LinkedList<string> setEstados(string miLinea){
-    LinkedList<string> misEstados = split(miLinea.substr(2) ',');
-    return misEstados;
-}
-LinkedList<string> setSimbolosLectura(string miLinea){
-    LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
-    return misSimbolos;
-}
-LinkedList<string> setSimbolosEscritura(string miLinea){
-    LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
-    return misSimbolos;
-}
-LinkedList<string> setEstadosAceptado(string miLinea){
-    LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
-    return misEstados;
-}
-LinkedList<string> setEstadosRechazo(string miLinea){
-    LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
-    return misEstados;
-}
-LinkedList<LinkedList<string>> transiciones;
-void setTransiciones(string miLinea){
-    LinkedList<string> misTRansiciones = split(miLinea.substr(2), ',');
-    transiciones.append(misTRansiciones);
-}
+        maquinaTuring(LinkedList<string> misLineasEnArchivo){
+
+            for(int linea = 0; linea < misLineasEnArchivo.getSize();linea++){
+                misLineasEnArchivo.goToPos(linea);
+                if(linea.front() == 'Q'){getEstados(misLineasEnArchivo.getElement())}
+                if(linea.front() == 'S'){getEstados(misLineasEnArchivo.getElement())}
+                if(linea.front() == 'G'){getEstados(misLineasEnArchivo.getElement())}
+                if(linea.front() == 'I'){getEstados(misLineasEnArchivo.getElement())}
+                if(linea.front() == 'B'){getEstados(misLineasEnArchivo.getElement())}
+                if(linea.front() == 'F'){getEstados(misLineasEnArchivo.getElement())}
+                if(linea.front() == 'R'){getEstados(misLineasEnArchivo.getElement())}
+                do{
+                    setTransiciones(misLineasEnArchivo.getElement())
+                }
+                while(linea.front() == 'T')
+            }
+        }
+
+        string getEstadoInicial(string miLinea){return miLinea.substr(2);}
+        string getSimboloBlanco(string miLinea){return miLinea.substr(2);}
+        LinkedList<string> getEstados(string miLinea){
+            LinkedList<string> misEstados = split(miLinea.substr(2) ',');
+            return misEstados;
+        }
+        LinkedList<string> getSimbolosLectura(string miLinea){
+            LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
+            return misSimbolos;
+        }
+        LinkedList<string> getSimbolosEscritura(string miLinea){
+            LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
+            return misSimbolos;
+        }
+        LinkedList<string> getEstadosAceptado(string miLinea){
+            LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
+            return misEstados;
+        }
+        LinkedList<string> getEstadosRechazo(string miLinea){
+            LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
+            return misEstados;
+        }
+        // Matriz 2D con transiciones
+        LinkedList<LinkedList<string>> transiciones;
+        void setTransiciones(string miLinea){
+            LinkedList<string> misTRansiciones = split(miLinea.substr(2), ',');
+            transiciones.append(misTRansiciones);
+        }
+        LinkedList<LinkedList<string>> getTransiciones(){return transiciones;}
 
 
+};
 #endif // MAQUINATURING_H
