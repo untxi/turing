@@ -38,6 +38,7 @@
 		<Unit filename="include/Grafo.h" />
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/Node.h" />
+		<Unit filename="include/grafoMatriz.h" />
 		<Unit filename="include/lectorArchivoTxt.h" />
 		<Unit filename="include/maquinaTuring.h" />
 		<Unit filename="include/notasGráficas.h" />
