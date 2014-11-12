@@ -21,3 +21,25 @@
 	<string>
 	<sstream>
 
+1415769808 source:c:\users\marco\documents\turing\maquinasturing\main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<string.h>
+	<strings.h>
+	<winbgim.h>
+	<GraficadorTuring.h>
+	<lectorArchivoTxt.h>
+
+1415769808 c:\users\marco\documents\turing\maquinasturing\include\graficadorturing.h
+	<winbgim.h>
+	<string>
+	<math.h>
+	<stdexcept>
+
+1415769808 c:\users\marco\documents\turing\maquinasturing\include\lectorarchivotxt.h
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+

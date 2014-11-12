@@ -35,6 +35,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/GraficadorTuring.h" />
+		<Unit filename="include/Grafo.h" />
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/lectorArchivoTxt.h" />
