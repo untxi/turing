@@ -58,5 +58,6 @@ int main(){
         misOpciones();
     }
     while (bandera != true);
+
     return 0;
-};
+}

@@ -45,21 +45,6 @@ class maquinaTuring{
         }
     public:
 
-        maquinaTuring(LinkedList<string> misLineasEnArchivo){
-
-            for(int linea = 0; linea < misLineasEnArchivo.getSize();linea++){
-                misLineasEnArchivo.goToPos(linea);
-                if(misLineasEnArchivo.getElement()[0] == 'Q'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'S'){getSimbolosEscritura(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'G'){getSimbolosEscritura(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'I'){getEstadoInicial(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'B'){getSimboloBlanco(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'F'){getEstadoFinal(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'R'){getEstadosRechazo(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'T'){setTransiciones(misLineasEnArchivo.getElement());}
-            }
-        }
-
         string getEstadoInicial(string miLinea){return miLinea.substr(2);}
         string getSimboloBlanco(string miLinea){return miLinea.substr(2);}
         LinkedList<string> getEstados(string miLinea){
@@ -81,7 +66,8 @@ class maquinaTuring{
         LinkedList<string> getEstadosRechazo(string miLinea){
             LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
             return misSimbolos;
-        LinkedList<string> getEstadosFinal(string miLinea){
+        }
+        LinkedList<string> getEstadoFinal(string miLinea){
             LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
             return misSimbolos;
         }
@@ -93,6 +79,19 @@ class maquinaTuring{
         }
         LinkedList< LinkedList<string> > getTransiciones(){return transiciones;}
 
+        maquinaTuring(LinkedList<string> misLineasEnArchivo){
 
+            for(int linea = 0; linea < misLineasEnArchivo.getSize();linea++){
+                misLineasEnArchivo.goToPos(linea);
+                if(misLineasEnArchivo.getElement()[0] == 'Q'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'S'){getSimbolosEscritura(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'G'){getSimbolosEscritura(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'I'){getEstadoInicial(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'B'){getSimboloBlanco(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'F'){getEstadoFinal(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'R'){getEstadosRechazo(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'T'){setTransiciones(misLineasEnArchivo.getElement());}
+            }
+        }
 };
 #endif // MAQUINATURING_H

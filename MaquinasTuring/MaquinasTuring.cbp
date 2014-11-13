@@ -38,7 +38,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Edge.h" />
 		<Unit filename="include/GraficadorTuring.h" />
+		<Unit filename="include/Graph.h" />
+		<Unit filename="include/Graphl.h" />
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/mainGrafico.h" />
