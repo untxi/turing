@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -38,7 +38,7 @@ void misOpciones(){
     cout << endl;
     cout << "Menu:" << endl;
     cout << "   a. Ingresar nombre del archivo de texto\n";
-    cout << "   b. Maquina de Turing\n";
+    cout << "   b. Información sobre Turing\n";
     cout << "   c. Salir del programa\n\n";
 }
 
@@ -50,7 +50,18 @@ void pausa()
 }
 
 
-int main(){
+int main2(){
+    const char*queEsTuring = "Una Maquina de Turing es un dispositivo que manipula simbolos escritos"\
+                              "sobre una tira de cinta de acuerdo a una tabla de reglas.\n"\
+                              "A pesar de su simplicidad, puede ser adaptada para simular la lógica\n"\
+                              "de cualquier algoritmo de computador.\n";
+
+    const char*quienEsTuring =  "Alan Mathison Turing\n\  *  23 de junio de 1912\n\  t   7 de junio de 1954\n"\
+                            "Fue un matematico, logico, cientifico de la computacion, criptografo y \n"\
+                            "filosofo britanico.\n"\
+                            "Es considerado uno de los padres de la ciencia de la computacion siendo\n"\
+                            "el  precursor  de  la  informatica moderna.  Proporciono una influyente\n"\
+                            "formalizacion de los conceptos de algoritmo y computacion.\n";
     LinkedList<string> miArchivo;
     bool bandera = false;
         do{
@@ -63,10 +74,12 @@ int main(){
                     system("cls");
                     cout << "hiA!\n";}//recibeArchivo();}
             if (miOpcion == 'b'){
+                    system("cls");
                     mainG();
                     system("cls");
+                    misOpciones();
             }
-            if (miOpcion == 'c'){bandera = true;    break;}
+            if (miOpcion == 'e'){bandera = true;    break;}
             else{pausa();}
             system("cls");
             misOpciones();
@@ -74,3 +87,4 @@ int main(){
         while (bandera != true);
     return 0;
 }
+*/

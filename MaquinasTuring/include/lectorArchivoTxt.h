@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -22,3 +22,4 @@ LinkedList<string> lectorArchivoTxt(){//string nombreArchivo){
 
     return misLineasDeArchivo;
 }
+*/

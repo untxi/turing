@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1415819969 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
+1415842329 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
 	<iostream>
-	<cstdlib>
+	<fstream>
 	<string>
-	<string.h>
-	<strings.h>
+	<sstream>
+	<cstdlib>
 	<winbgim.h>
+	<stdio.h>
 	<LinkedList.h>
 	<Node.h>
-	<GraficadorTuring.h>
-	<lectorArchivoTxt.h>
+	<mainGrafico.h>
 
 1415290570 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\graficadorturing.h
 	<winbgim.h>
@@ -47,7 +47,7 @@
 	<string>
 	<sstream>
 
-1415820043 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\linkedlist.h
+1415820062 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\linkedlist.h
 	<Node.h>
 	<iostream>
 	<stdexcept>
@@ -56,4 +56,25 @@
 	<iostream>
 
 1415767682 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\node.h
+
+1415832251 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\funcionesmain.h
+	<winbgim.h>
+	<stdio.h>
+	<lectorArchivoTxt.h>
+
+1415843098 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\maingrafico.h
+	<main2.h>
+	<winbgim.h>
+	<stdio.h>
+
+1415834547 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\main2.h
+	<fstream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<winbgim.h>
+	<stdio.h>
+	<LinkedList.h>
+	<Node.h>
+	<mainGrafico.h>
 
