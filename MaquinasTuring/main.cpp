@@ -8,23 +8,7 @@
 #include <LinkedList.h>
 #include <Node.h>
 #include <mainGrafico.h>
-
-LinkedList<string> lectorArchivoTxt(){//string nombreArchivo){
-    LinkedList<string> misLineasDeArchivo;
-    string lineaEnArchivo;
-    ifstream archivoPorAbrir ("C:\\Users\\Samantha\\Desktop\\TuringEj1.txt");
-    if (archivoPorAbrir.is_open()){
-        while ( getline (archivoPorAbrir,lineaEnArchivo) ){
-            //cout << lineaEnArchivo << '\n';
-            misLineasDeArchivo.append(lineaEnArchivo);
-         }
-        archivoPorAbrir.close();
-        cout << "DONE Successful append :D\n";
-      }
-      else cout << "Unable to open file";
-
-    return misLineasDeArchivo;
-}
+#include <manipuladorArchivo.h>
 
 void misOpciones(){
     cout <<"\n        ______  ______  ______  ______  ______  ______  ______  ______ " << endl;
@@ -37,13 +21,12 @@ void misOpciones(){
     cout <<" |/____\\||/____\\||/_________\\||/____\\||/____\\||/____\\||/____\\||/____\\||/____\\|" << endl;
     cout << endl;
     cout << "Menu:" << endl;
-    cout << "   a. Ingresar nombre del archivo de texto\n";
-    cout << "   b. Maquina de Turing\n";
-    cout << "   c. Salir del programa\n\n";
+    cout << "   I. Ingresar nombre del archivo de texto\n";
+    cout << "   M. Maquina de Turing\n";
+    cout << "   S. Salir del programa\n\n";
 }
 
-void pausa()
-{
+void pausa(){
     cout << "\n\nPresione enter para volver al menu.";
     getwchar();
     getwchar();
@@ -53,24 +36,27 @@ void pausa()
 int main(){
     LinkedList<string> miArchivo;
     bool bandera = false;
-        do{
-            char miOpcion;
+    do{
+        char miOpcion;
+        system("cls");
+        misOpciones();
+        cout << "Seleccione una opcion:  ";
+        cin  >> miOpcion;
+        if (miOpcion == 'I' || miOpcion == 'i'){
             system("cls");
-            misOpciones();
-            cout << "Seleccione una opcion:  ";
-            cin  >> miOpcion;
-            if (miOpcion == 'a'){
-                    system("cls");
-                    cout << "hiA!\n";}//recibeArchivo();}
-            if (miOpcion == 'b'){
-                    mainG();
-                    system("cls");
-            }
-            if (miOpcion == 'c'){bandera = true;    break;}
-            else{pausa();}
-            system("cls");
-            misOpciones();
-        }
-        while (bandera != true);
+            lectorArchivoTxt();
+            predibujo();}
+        if (miOpcion == 'M' || miOpcion == 'm'){
+            mainG();
+            system("cls");}
+        if (miOpcion == 'S' || miOpcion == 's'){
+            bandera = true;
+            break;}
+        else{pausa();}
+
+        system("cls");
+        misOpciones();
+    }
+    while (bandera != true);
     return 0;
-}
+};

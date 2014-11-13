@@ -49,24 +49,21 @@ class maquinaTuring{
 
             for(int linea = 0; linea < misLineasEnArchivo.getSize();linea++){
                 misLineasEnArchivo.goToPos(linea);
-                if(linea.front() == 'Q'){getEstados(misLineasEnArchivo.getElement())}
-                if(linea.front() == 'S'){getEstados(misLineasEnArchivo.getElement())}
-                if(linea.front() == 'G'){getEstados(misLineasEnArchivo.getElement())}
-                if(linea.front() == 'I'){getEstados(misLineasEnArchivo.getElement())}
-                if(linea.front() == 'B'){getEstados(misLineasEnArchivo.getElement())}
-                if(linea.front() == 'F'){getEstados(misLineasEnArchivo.getElement())}
-                if(linea.front() == 'R'){getEstados(misLineasEnArchivo.getElement())}
-                do{
-                    setTransiciones(misLineasEnArchivo.getElement())
-                }
-                while(linea.front() == 'T')
+                if(misLineasEnArchivo.getElement()[0] == 'Q'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'S'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'G'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'I'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'B'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'F'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'R'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'T'){setTransiciones(misLineasEnArchivo.getElement());}
             }
         }
 
         string getEstadoInicial(string miLinea){return miLinea.substr(2);}
         string getSimboloBlanco(string miLinea){return miLinea.substr(2);}
         LinkedList<string> getEstados(string miLinea){
-            LinkedList<string> misEstados = split(miLinea.substr(2) ',');
+            LinkedList<string> misEstados = split(miLinea.substr(2), ',');
             return misEstados;
         }
         LinkedList<string> getSimbolosLectura(string miLinea){
@@ -79,19 +76,19 @@ class maquinaTuring{
         }
         LinkedList<string> getEstadosAceptado(string miLinea){
             LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
-            return misEstados;
+            return misSimbolos;
         }
         LinkedList<string> getEstadosRechazo(string miLinea){
             LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
-            return misEstados;
+            return misSimbolos;
         }
         // Matriz 2D con transiciones
-        LinkedList<LinkedList<string>> transiciones;
+        LinkedList< LinkedList<string> > transiciones;
         void setTransiciones(string miLinea){
             LinkedList<string> misTRansiciones = split(miLinea.substr(2), ',');
             transiciones.append(misTRansiciones);
         }
-        LinkedList<LinkedList<string>> getTransiciones(){return transiciones;}
+        LinkedList< LinkedList<string> > getTransiciones(){return transiciones;}
 
 
 };

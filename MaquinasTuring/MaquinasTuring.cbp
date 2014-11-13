@@ -15,6 +15,10 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add option="-lbgi -lgdi32 -luser32" />
+					<Add library="C:\Program Files\CodeBlocks\MinGW\lib\libbgi.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/MaquinasTuring" prefix_auto="1" extension_auto="1" />
@@ -39,7 +43,8 @@
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/grafoMatriz.h" />
-		<Unit filename="include/lectorArchivoTxt.h" />
+		<Unit filename="include/mainGrafico.h" />
+		<Unit filename="include/manipuladorArchivo.h" />
 		<Unit filename="include/maquinaTuring.h" />
 		<Unit filename="include/notasGráficas.h" />
 		<Unit filename="main.cpp" />
