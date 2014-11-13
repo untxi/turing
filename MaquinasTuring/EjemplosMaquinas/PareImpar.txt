@@ -1,0 +1,13 @@
+Q:i,Par,Impar,HLT
+S:*,0,1
+G:*,0,1
+T:i,*,Par,*,>
+T:Par,0,Par,0,>
+T:Par,1,Impar,1,>
+T:Par,*,HLT,*,>
+T:Impar,0,Impar,0,>
+T:Impar,1,Par,1,>
+T:Impar,*,HLT,*,>
+I:i
+B:B
+F:HLT

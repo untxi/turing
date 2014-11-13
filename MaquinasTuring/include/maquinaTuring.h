@@ -50,12 +50,12 @@ class maquinaTuring{
             for(int linea = 0; linea < misLineasEnArchivo.getSize();linea++){
                 misLineasEnArchivo.goToPos(linea);
                 if(misLineasEnArchivo.getElement()[0] == 'Q'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'S'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'G'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'I'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'B'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'F'){getEstados(misLineasEnArchivo.getElement());}
-                if(misLineasEnArchivo.getElement()[0] == 'R'){getEstados(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'S'){getSimbolosEscritura(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'G'){getSimbolosEscritura(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'I'){getEstadoInicial(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'B'){getSimboloBlanco(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'F'){getEstadoFinal(misLineasEnArchivo.getElement());}
+                if(misLineasEnArchivo.getElement()[0] == 'R'){getEstadosRechazo(misLineasEnArchivo.getElement());}
                 if(misLineasEnArchivo.getElement()[0] == 'T'){setTransiciones(misLineasEnArchivo.getElement());}
             }
         }
@@ -79,6 +79,9 @@ class maquinaTuring{
             return misSimbolos;
         }
         LinkedList<string> getEstadosRechazo(string miLinea){
+            LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
+            return misSimbolos;
+        LinkedList<string> getEstadosFinal(string miLinea){
             LinkedList<string> misSimbolos = split(miLinea.substr(2), ',');
             return misSimbolos;
         }

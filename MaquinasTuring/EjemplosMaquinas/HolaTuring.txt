@@ -1,0 +1,17 @@
+Q:i,H,O,L,A,TT,U,R,II,N,GG,HLT
+S:*
+G:*,H,O,L,A,TT,U,R,II,N,GG
+T:i,*,H,H,>
+T:H,G,O,O,>
+T:O,G,L,L,>
+T:L,G,A,A,>
+T:A,G,TT,TT,>
+T:TT,G,U,U,>
+T:U,G,R,R,>
+T:R,G,II,II,>
+T:II,G,N,N,>
+T:N,G,GG,GG,>
+T:GG,*,HLT,*,>
+I:i
+B:B
+F:HLT
