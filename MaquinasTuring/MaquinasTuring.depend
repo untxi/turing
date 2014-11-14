@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1415847125 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
+1415919133 source:c:\users\samantha\documents\workspacec++\turing\maquinasturing\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -63,7 +63,7 @@
 	<stdio.h>
 	<lectorArchivoTxt.h>
 
-1415844853 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\maingrafico.h
+1415936743 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\maingrafico.h
 	<main2.h>
 	<winbgim.h>
 	<stdio.h>
@@ -88,7 +88,7 @@
 	<Node.h>
 	<maquinaTuring.h>
 
-1415904128 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\maquinaturing.h
+1415919269 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\maquinaturing.h
 	<iostream>
 	<string>
 	<sstream>

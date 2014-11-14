@@ -44,6 +44,7 @@
 		<Unit filename="include/Graphl.h" />
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/Node.h" />
+		<Unit filename="include/ejecutarTuring.h" />
 		<Unit filename="include/mainGrafico.h" />
 		<Unit filename="include/manipuladorArchivo.h" />
 		<Unit filename="include/maquinaTuring.h" />

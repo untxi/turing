@@ -14,7 +14,8 @@ bool bandera = true;
 int mainG(){
 //inico del programa
     initwindow(810,680);//ancho, alto
-
+    //const char*title = "Máquina de Turing";
+    setwindowtitle("Máquina de Turing");
 
     setcolor(15);
     rectangle(8,7,791,651);
@@ -32,7 +33,7 @@ int mainG(){
     setbkcolor(COLOR(153,0,153));//fondo de letra
     settextstyle(10,0,1);//tipo de letra
     setcolor(15);//color de letra
-    outtextxy(19,12,"Máquinas de Turing");//titulo
+    outtextxy(19,12,"        >-<>-<>-<>-<>-<>-< Máquinas de Turing >-<>-<>-<>-<>-<>-< ");//titulo
 
     boton(20,42,113,95,15,0);//primer boton
     setbkcolor(COLOR(221,215,210));
