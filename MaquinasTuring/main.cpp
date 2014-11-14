@@ -9,6 +9,7 @@
 #include <Node.h>
 #include <mainGrafico.h>
 #include <manipuladorArchivo.h>
+#include <ejecutarTuring.h>
 
 void misOpciones(){
     cout <<"\n        ______  ______  ______  ______  ______  ______  ______  ______ " << endl;
@@ -44,8 +45,15 @@ int main(){
         cin  >> miOpcion;
         if (miOpcion == 'I' || miOpcion == 'i'){
             system("cls");
+            string tiraUsuario;
+            cout << "Digite la tira que desea ingresar a la Maquina: ";
+            cin >> tiraUsuario;
+            cout << "Cargando Maquina de Turing...\n";
             lectorArchivoTxt();
-            predibujo();}
+            maquinaTuring maquinaUpLoad = predibujo();
+            ejecutarTuring miTuring = miTuring(tiraUsuario, maquinaTuring)
+
+        }
         if (miOpcion == 'M' || miOpcion == 'm'){
             mainG();
             system("cls");}

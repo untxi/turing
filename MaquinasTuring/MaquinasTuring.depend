@@ -79,10 +79,11 @@
 	<Node.h>
 	<mainGrafico.h>
 
-1415847600 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\manipuladorarchivo.h
+1415981081 c:\users\samantha\documents\workspacec++\turing\maquinasturing\include\manipuladorarchivo.h
 	<iostream>
 	<fstream>
 	<string>
+	<string.h>
 	<sstream>
 	<LinkedList.h>
 	<Node.h>

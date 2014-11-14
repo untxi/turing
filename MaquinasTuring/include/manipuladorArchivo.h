@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <string.h>
 #include <sstream>
 #include <LinkedList.h>
 #include <Node.h>
@@ -10,25 +11,28 @@
 
 LinkedList<string> misLineasDeArchivo;
 
-void lectorArchivoTxt(){//string nombreArchivo){
+void lectorArchivoTxt(){//,string nombreArchivo){
 
     string lineaEnArchivo;
-    ifstream archivoPorAbrir ("C:\\Users\\Samantha\\Desktop\\TuringEj1.txt");
+    const char* nombreArchivo ="C:\\Users\\Samantha\\Desktop\\Proyecto Turing\\Turing.txt";
+
+    ifstream archivoPorAbrir (nombreArchivo);
     if (archivoPorAbrir.is_open()){
         while ( getline (archivoPorAbrir,lineaEnArchivo) ){
             misLineasDeArchivo.append(lineaEnArchivo);
          }
         archivoPorAbrir.close();
-        cout << "DONE Successful append :D\n";
+        cout << "Successful UpLoad\n";
     }
     else{cout << "Unable to open file";}
 }
 
-void predibujo(){
+maquinaTuring predibujo(){
     /*for(int i = 0; i < misLineasDeArchivo.getSize(); i++){
         misLineasDeArchivo.goToPos(i);
         cout << misLineasDeArchivo.getElement() << endl;
     }*/
     maquinaTuring miMaquinaActual = maquinaTuring(misLineasDeArchivo);
-    cout << "creó el objeto\n";
+    cout << "Maquina Cargada al Programa, dirijase a Menu > Maquina de Turing\n";
+    return miMaquinaActual;
 }

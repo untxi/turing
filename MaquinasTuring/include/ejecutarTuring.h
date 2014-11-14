@@ -1,5 +1,7 @@
 #ifndef EJECUTARTURING_H
 #define EJECUTARTURING_H
+#include <maquinaTuring.h>
+#include <LinkedList.h>
 /*LinkedList<string> estados;
     estados.append("i");
     estados.append("Par");
@@ -89,6 +91,8 @@ class ejecutarTuring
         string simboloWrite;
         string movimiento;
         int    cabeza;
+        string tiraIngresada;
+        LinkedList<string> Trancisiones;
 
         bool verificarTira(string tira, LinkedList<string> simbolos){
                 //static const size_t npos = -1;
@@ -104,7 +108,7 @@ class ejecutarTuring
             }
 
         bool ejecutar(string estadoActual, string simboloRead, string estadoDestino, string simboloWrite, string movimiento){
-            for(int i = 0; i < tiraIngresada.lenght(); i++){
+            for(int i = 0; i < tiraIngresada.size(); i++){
                 if(Trancisiones[i][0] == estadoActual && Trancisiones[i] == simboloRead){
                     tiraIngresada[cabeza] = Trancisiones[i][3];
                     if(Trancisiones[i][5] == "<"){cabeza--;}
@@ -117,7 +121,9 @@ class ejecutarTuring
         }
 
     public:
-        ejecutarTuring(string tiraIngresada){//, maquinaTuring miMaquina) {
+        ejecutarTuring(string pTiraIngresada, maquinaTuring miMaquina) {
+            tiraIngresada = pTiraIngresada;
+            Trancisiones = miMaquina.getTransiciones();
             if(verificarTira(tiraIngresada, simbolosIn)){
                     if(ejecutar(estadoActual, simboloRead, estadoDestino, simboloWrite, movimiento)){
                         cout << "Ejecutando Turing...\n";
@@ -127,7 +133,7 @@ class ejecutarTuring
             else {cout << "Se encontrarón simbolos incorrectos en la tira"<<endl;}
         }
 
-        virtual ~ejecutaTuring() {}
+        //virtual ~ejecutaTuring() {}
 
 
 };
