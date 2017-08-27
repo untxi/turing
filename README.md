@@ -1,6 +1,13 @@
-turing
-======
-Bibliografía
-http://c.conclase.net/curso/?cap=039
-http://creatusjuegosdecero.webege.com/index.php?topic=99.0
-http://www.nebrija.es/~abustind/Informatica/MetodologiaI/Archivos.pdf
+
+
+Tecnológico de Costa Rica
+
+Escuela de Ingeniería en Computación
+
+Curso: Estructuras de Datos
+
+Proyecto: Máquinas de Turing (Grafos)
+
+Profesor: Mauricio Avilés
+
+Semestre II, 2014
